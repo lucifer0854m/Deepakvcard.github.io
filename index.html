@@ -49,7 +49,7 @@
           <h1 class="name" title="Deepak Lodhi">Deepak Lodhi</h1>
 
           <p class="title">Student
-
+         
           </p>
         </div>
 
@@ -606,42 +606,36 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Creative director</h4>
+              <h4 class="h4 timeline-item-title">Upadte Later</h4>
 
-              <span>2015 — Present</span>
+              <span>YYYY — YYYY</span>
 
               <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
+                Text.
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Art director</h4>
+              <h4 class="h4 timeline-item-title">Upadte Later</h4>
 
-              <span>2013 — 2015</span>
+              <span>YYYY -YYYY</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                Text
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Web designer</h4>
+              <h4 class="h4 timeline-item-title">Upadte Later</h4>
 
-              <span>2010 — 2013</span>
+              <span>YYYY - YYYY</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                Text
               </p>
 
             </li>
@@ -992,7 +986,7 @@
                   <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
 
                   <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                    Text
                   </p>
 
                 </div>
@@ -1020,7 +1014,7 @@
                   <h3 class="h3 blog-item-title">Best fonts every designer</h3>
 
                   <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                    Text
                   </p>
 
                 </div>
@@ -1048,7 +1042,7 @@
                   <h3 class="h3 blog-item-title">Design digest #80</h3>
 
                   <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                    Text
                   </p>
 
                 </div>
@@ -1076,7 +1070,7 @@
                   <h3 class="h3 blog-item-title">UI interactions of the week</h3>
 
                   <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                    Text
                   </p>
 
                 </div>
@@ -1104,7 +1098,7 @@
                   <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
 
                   <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Text
                   </p>
 
                 </div>
@@ -1132,7 +1126,7 @@
                   <h3 class="h3 blog-item-title">Design digest #79</h3>
 
                   <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                    Text
                   </p>
 
                 </div>
@@ -1181,7 +1175,7 @@
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
+            <button class="form-btn" type="submit" 
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
@@ -1193,6 +1187,7 @@
       </article>
 
     </div>
+    
 
   </main>
 
@@ -1205,12 +1200,35 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+  <script>
+    function senEmail() {
+      Email.send({
+        Host : "smtp.gmail.com",
+        Username : "Deepakshinglodhi123456@gmail.com",
+        Password : "16320020",
+        
+        To: 'Deepakshinglodhi123456@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "New Contact For Enquiry ",
+        Body : "Name: " + document.getElementById("name").value
+        + "<br> Email: " + document.getElementById("email").value
+        + "<br> Phone No: " + document.getElementById("phone").value
+        + "<br> Message: " + document.getElementById("message").value
+      }).than(
+        massage => alert(massage)
+      );
+    }
+  </script>
+
 
   <!--
     - ionicon link
   -->
+  
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  
 
 </body>
 
